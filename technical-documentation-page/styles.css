@@ -1,0 +1,111 @@
+/* Your technical documentation should use at least one media query */
+:root {
+  --white: #fff;
+  --gray: #eee;
+  --black: #303841;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 2px solid black; */
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: var(--black);
+  font-size: 1.6rem;
+  font-family: Poppins, sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.container {
+  padding: 0 4rem;
+}
+
+.place-items-center {
+  display: grid;
+  place-content: center;
+  place-items: center;
+}
+
+/* NAV STYLES */
+#navbar {
+}
+.navbar-header {
+  text-align: center;
+  font-size: 2.7rem;
+  padding: 1.5rem 0;
+}
+
+.nav-links {
+  border: 2px solid var(--black);
+  list-style: none;
+  height: 20rem;
+  overflow-y: scroll;
+}
+.nav-link {
+  display: block;
+  padding: 1rem 3rem;
+}
+.nav-links li {
+  border-bottom: 1px solid var(--black);
+}
+
+/* MAIN STYLES */
+#main-doc {
+  padding: 3rem;
+}
+
+.main-section .header {
+  font-size: 3rem;
+  margin: 2rem 0;
+}
+.main-section p,
+.main-section ul {
+  margin: 1.5rem;
+}
+.main-section ul {
+  margin-left: 5rem;
+}
+
+code {
+  background-color: var(--gray);
+  padding: 1rem;
+  margin: 2rem;
+  line-height: 3rem;
+  display: block;
+}
+
+@media only screen and (min-width: 800px) {
+  body {
+    /* display: flex; */
+  }
+  #main-doc {
+    margin-left: 30rem;
+    border-left: 4px solid gray;
+  }
+  #navbar {
+    width: 30rem;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+  }
+  .nav-links {
+    border: none;
+    height: unset;
+    border-top: 1px solid var(--black);
+  }
+}
