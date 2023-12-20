@@ -110,7 +110,7 @@ function App() {
               <i className="fa fa-twitter"></i>
             </a>
             <a
-              href=""
+              href="#"
               type="button"
               id="tumblr-quote"
               title="tumblr this quote!"
