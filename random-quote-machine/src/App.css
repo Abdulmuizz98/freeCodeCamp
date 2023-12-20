@@ -1,0 +1,11 @@
+main,
+#tweet-quote,
+#tumblr-quote,
+#author,
+#text,
+button {
+  transition: background-color 3s, color 3s;
+}
+.quote {
+  transition: opacity 1s;
+}
