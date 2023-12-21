@@ -12,15 +12,10 @@ function App() {
   const editorRef = useRef(null);
 
   const [content, setContent] = useState(placeholder);
-  const [parsed, setParsed] = useState("");
 
   const handleContentChange = (e) => {
     setContent(e.target.value);
   };
-
-  useEffect(() => {
-    setParsed(marked(content, { breaks: true }));
-  }, [content]);
 
   useEffect(() => {
     const prevRefChildren = [...prevRef.current.childNodes];
@@ -33,7 +28,7 @@ function App() {
     if (window) {
       Prism.highlightAll();
     }
-  }, [parsed]);
+  }, [content]);
 
   return (
     <main className="bg-green min-h-screen py-8 text-base">
@@ -60,7 +55,7 @@ function App() {
             ref={prevRef}
             className="menu-body min-h-40 p-4"
             dangerouslySetInnerHTML={{
-              __html: parsed,
+              __html: marked(content, { breaks: true }),
             }}
           ></article>
         }
