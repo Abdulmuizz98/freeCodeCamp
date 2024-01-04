@@ -16,9 +16,9 @@ export default {
       digital: ["Digital"],
     },
     extend: {},
-    // screens: {
-    //   sm: "640px",
-    // },
+    screens: {
+      md: "640px",
+    },
   },
   plugins: [],
 };
