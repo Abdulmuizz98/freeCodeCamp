@@ -2,9 +2,10 @@ import { useRef, useState, useEffect } from "react";
 import LengthControl from "./LengthControl";
 import "./App.css";
 
-const presentTime = (milisecsTime) => {
-  const time = new Date(milisecsTime);
-  const hrs = time.getHours() - 1;
+const timeOffsetMilisecs = new Date().getTimezoneOffset() * 60000;
+const presentTime = (timeMilisecs) => {
+  const time = new Date(timeMilisecs + timeOffsetMilisecs);
+  const hrs = time.getHours();
   const sec = time.getSeconds();
   const min = hrs * 60 + time.getMinutes();
   return `${min < 10 ? "0" : ""}${min}:${sec < 10 ? "0" : ""}${sec}`;
