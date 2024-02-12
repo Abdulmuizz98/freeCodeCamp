@@ -25,8 +25,8 @@ const url =
     .domain([0, yMax])
     .range([h - padding, padding]);
 
-  const xAxis = d3.axisBottom(xScale).tickFormat("tick");
-  const yAxis = d3.axisLeft(yScale).tickFormat("tick");
+  const xAxis = d3.axisBottom(xScale);
+  const yAxis = d3.axisLeft(yScale);
 
   const svg = d3
     .select(".chart-section")
