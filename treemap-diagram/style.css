@@ -1,0 +1,68 @@
+body {
+  /* display: flex; */
+  justify-content: center;
+  height: 100vh;
+}
+
+#title {
+  text-align: center;
+  font-weight: 400;
+  font-size: 40px;
+}
+#description {
+  text-align: center;
+}
+
+.chart-section {
+  position: relative;
+  text-align: center;
+  max-width: 80%;
+  width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.axis path {
+  display: none;
+}
+
+#tooltip {
+  display: flex;
+  font: 12px Arial;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 204, 0.9);
+  box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.6);
+  font-size: 12px;
+  position: absolute;
+  z-index: 100;
+  top: 70%;
+  opacity: 0;
+  transition: opacity 1s ease;
+  pointer-events: none;
+  border: 0px;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+#source {
+  text-align: right;
+  max-width: 80%;
+  width: 1000px;
+  margin: auto;
+}
+
+text {
+  font-family: sans-serif;
+}
+
+svg {
+  margin-top: 20px;
+}
+
+header {
+  text-align: center;
+}

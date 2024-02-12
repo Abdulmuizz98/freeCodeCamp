@@ -1,0 +1,41 @@
+body {
+  height: 100vh;
+}
+
+h1#title {
+  text-align: center;
+  font-weight: 400;
+  font-size: 30px;
+  margin: 0;
+}
+
+p#sub-title {
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+.chart-section {
+  margin: auto;
+  position: relative;
+  background-color: white;
+  text-align: center;
+}
+
+#tooltip {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  font-size: 16px;
+  position: absolute;
+  z-index: 100;
+  top: 70%;
+  opacity: 0;
+  transition: opacity 1s ease;
+  pointer-events: none;
+  border-radius: 8px;
+  padding: 10px;
+  color: white;
+}
